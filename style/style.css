@@ -649,3 +649,9 @@ footer p:hover{
     color: #3b3838;
     font-weight: 500;
 }
+
+.desarrollado{
+    display: flex;
+    margin-top: 10px;
+    color: #3b3838;
+}
