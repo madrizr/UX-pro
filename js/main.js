@@ -1,3 +1,4 @@
+// FUNCIONALIDAD DEL SLIDER
 const wrapper = document.querySelector('.wrapper')
 const carrusel = document.querySelector('.carrusel')
 const firstCardWidth = carrusel.querySelector('.card').offsetWidth
@@ -58,3 +59,31 @@ carrusel.addEventListener('mousedown', dragStart)
 carrusel.addEventListener('mousemove', dragging)
 document.addEventListener('mouseup', dragStop)
 carrusel.addEventListener('scroll', infiniteScroll)
+
+// BOTON DEL FORMULARIO
+
+const input = document.getElementById('miInput')
+const input2 = document.getElementById('miInput2')
+const maxtxt = document.getElementById('max')
+const maxtxt2 = document.getElementById('max2')
+
+maxtxt.style.color = "#E53935"
+maxtxt2.style.color = "#E53935"
+
+input.addEventListener('input', e =>{
+    if (input.value.length < 12){
+        maxtxt.innerText = ''
+    } else{
+        maxtxt.innerText = 'Maximo de caracteres'
+        input.value = input.value.substring(0, 12)
+    }
+})  
+
+input2.addEventListener('input', e =>{
+    if (input2.value.length < 100){
+        maxtxt2.innerText = ''
+    } else{
+        maxtxt2.innerText = 'Maximo de caracteres'
+        input2.value = input2.value.substring(0, 100)
+    }
+})  
