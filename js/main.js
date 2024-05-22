@@ -71,11 +71,10 @@ maxtxt.style.color = "#E53935"
 maxtxt2.style.color = "#E53935"
 
 input.addEventListener('input', e =>{
-    if (input.value.length < 14){
+    if (input.value.length < 11){
         maxtxt.innerText = ''
     } else{
-        maxtxt.innerText = 'Maximo de caracteres'
-        input.value = input.value.substring(0, 14)
+        input.value = input.value.substring(0, 11)
     }
 })  
 
